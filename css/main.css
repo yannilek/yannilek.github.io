@@ -1,0 +1,112 @@
+:root {
+  --primary: #FFCE00;
+  --secondary: #FE4880;
+  --dark: #212121;
+  --light: #F3F3F3;
+}
+
+@font-face {
+  font-family: PP Formula;
+  src: url(./ppformula.ttf);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: PP Formula,sans-serif;
+  width: 100%;
+  background-color: #faf8df;
+  min-height: 100vh;
+}
+
+.mainTitle {
+  font-family: PP Formula,sans-serif;
+  margin: 1em;
+  color: #158053;
+}
+
+.cardContainer {
+  margin: 1em auto 0;
+  width: 20em;
+  height: 30em;
+  perspective: 50em;
+}
+
+.fullWidth {
+  height: 100%;
+  width: 100%;
+}
+
+.cardInner {
+  width: 100%;
+  height: 100%;
+  transition: transform 1s;
+  transform-style: preserve-3d;
+  cursor: pointer;
+  position: relative;
+}
+
+.cardInner.isFlipped {
+  transform: rotateY(180deg);
+}
+
+
+.cardFace {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  overflow: hidden;
+  border-radius: 30px;
+  box-shadow: 0px 3px 18px 3px rgba(0, 0, 0, 0.2);
+}
+
+.cardFaceFront {
+  background-image: linear-gradient(to bottom right, var(--primary), var(--secondary));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cardFaceBack {
+  background-color: var(--light);
+  transform: rotateY(180deg);
+}
+
+.cardContent {
+  width: 100%;
+  height: 100%;
+}
+
+.cardHeader {
+  position: relative;
+  padding: 30px 30px 40px;
+}
+
+.cardHeader:after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: linear-gradient(to bottom left, var(--primary) 10%, var(--secondary) 115%);
+  z-index: -1;
+  border-radius: 0px 0px 50% 0px;
+}
+
+.pp {
+  display: block;
+  width: 128px;
+  height: 128px;
+  margin: 0 auto 30px;
+  border-radius: 50%;
+  background-color: #FFF;
+  border: 5px solid #FFF;
+  object-fit: cover;
+}
