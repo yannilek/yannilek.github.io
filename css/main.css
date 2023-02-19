@@ -93,13 +93,13 @@ body {
 .cardHeader {
   position: relative;
   padding: 1em;
+  height: 20%;
 }
 
 .pp {
   display: block;
-  width: 6em;
-  height: 6em;
-  margin: 0 auto 3em;
+  width: 4em;
+  height: 4em;
   border-radius: 50%;
   background-color: #FFF;
   border: 3px solid #FFF;
@@ -120,18 +120,28 @@ body {
 
 .cardBody {
   padding: 1em;
+  height: 55%;
 }
 
-.cardBody h3 {
-  font-size: 2em;
+.cardBodyTitle {
+  padding-left: 1em;
+  padding-right: 1em;
+  font-size: 1.5em;
   font-weight: 800;
+  margin-bottom: 0.5em;
 }
 
-.cardBody p {
+.cardBody {
+  font-family: Neue thin;
+  padding: 1em;
+  height: 55%;
+}
+
+.cardTagline {
   font-family: Neue regular;
 }
 
-.violet .cardBody {
+.violet .cardBody,.violet .cardTagline, violet .cardBodyTitle {
   color: var(--dark);
 }
 
@@ -139,10 +149,22 @@ body {
   color: var(--violet);
 }
 
-.volt .cardBody {
+.volt .cardBody, .volt .cardTagline, .volt .cardBodyTitle {
   color: var(--light);
 }
 
 .volt .cardBody span {
   color: var(--volt);
+}
+
+.cardTagline {
+  height: 10%;
+}
+
+.cardFooter {
+  height: 10%;
+}
+
+.footerLogo {
+  /* width: 15%; */
 }
