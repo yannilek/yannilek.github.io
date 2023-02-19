@@ -1,13 +1,24 @@
 :root {
-  --primary: #FFCE00;
-  --secondary: #FE4880;
-  --dark: #212121;
+  --green: #158053;
+  --violet: #938ae2;
+  --volt: #ceff00;
+  --dark: #393c3a;
   --light: #F3F3F3;
 }
 
 @font-face {
   font-family: PP Formula;
   src: url(./ppformula.ttf);
+}
+
+@font-face {
+  font-family: Neue thin;
+  src: url(./Neue_thin.ttf);
+}
+
+@font-face {
+  font-family: Neue regular;
+  src: url(./Neue_regular.ttf);
 }
 
 * {
@@ -24,14 +35,17 @@ body {
 
 .mainTitle {
   font-family: PP Formula,sans-serif;
-  margin: 1em;
-  color: #158053;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  padding: 0.5em;
+  font-weight: 900;
+  color: var(--green);
 }
 
 .cardContainer {
   margin: 1em auto 0;
-  width: 20em;
-  height: 30em;
+  width: 18em;
+  height: 27.5em;
   perspective: 50em;
 }
 
@@ -66,15 +80,9 @@ body {
 }
 
 .cardFaceFront {
-  background-image: linear-gradient(to bottom right, var(--primary), var(--secondary));
   display: flex;
   align-items: center;
   justify-content: center;
-}
-
-.cardFaceBack {
-  background-color: var(--light);
-  transform: rotateY(180deg);
 }
 
 .cardContent {
@@ -84,29 +92,57 @@ body {
 
 .cardHeader {
   position: relative;
-  padding: 30px 30px 40px;
-}
-
-.cardHeader:after {
-  content: '';
-  display: block;
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-image: linear-gradient(to bottom left, var(--primary) 10%, var(--secondary) 115%);
-  z-index: -1;
-  border-radius: 0px 0px 50% 0px;
+  padding: 1em;
 }
 
 .pp {
   display: block;
-  width: 128px;
-  height: 128px;
-  margin: 0 auto 30px;
+  width: 6em;
+  height: 6em;
+  margin: 0 auto 3em;
   border-radius: 50%;
   background-color: #FFF;
-  border: 5px solid #FFF;
+  border: 3px solid #FFF;
   object-fit: cover;
+}
+
+.cardFaceBack {
+  transform: rotateY(180deg);
+}
+
+.violet .cardFaceBack {
+  background: var(--light);
+}
+
+.volt .cardFaceBack {
+  background: var(--dark);
+}
+
+.cardBody {
+  padding: 1em;
+}
+
+.cardBody h3 {
+  font-size: 2em;
+  font-weight: 800;
+}
+
+.cardBody p {
+  font-family: Neue regular;
+}
+
+.violet .cardBody {
+  color: var(--dark);
+}
+
+.violet .cardBody span {
+  color: var(--violet);
+}
+
+.volt .cardBody {
+  color: var(--light);
+}
+
+.volt .cardBody span {
+  color: var(--volt);
 }
