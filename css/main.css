@@ -118,11 +118,6 @@ body {
   background: var(--dark);
 }
 
-.cardBody {
-  padding: 1em;
-  height: 55%;
-}
-
 .cardBodyTitle {
   padding-left: 1em;
   padding-right: 1em;
@@ -147,6 +142,7 @@ body {
 
 .violet .cardBody span {
   color: var(--violet);
+  font-family: Neue regular;
 }
 
 .volt .cardBody, .volt .cardTagline, .volt .cardBodyTitle {
@@ -155,6 +151,7 @@ body {
 
 .volt .cardBody span {
   color: var(--volt);
+  font-family: Neue regular;
 }
 
 .cardTagline {
