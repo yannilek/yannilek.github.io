@@ -3,7 +3,7 @@ const cards = [
     image: './images/temperance.png',
     title: 'Nos activités sociales',
     color: 'violet',
-    text: 'Comprendre les besoins de chacun.<br>Définir des <span>avantages</span> accessibles <span>pour tous·tes</span> à Toulouse et ailleurs.',
+    text: 'Comprendre les besoins de chacun·e.<br>Définir des <span>avantages</span> accessibles <span>pour tous·tes</span> à Toulouse et ailleurs.',
     cfdText: 'Avec la CFDT, préparez <span>l\'avenir</span>',
   },
   {
